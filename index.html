@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_151c038c2c1d094d1b9a0feacead93de {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+<style>
+
+/* Kill polygon focus / click outline box */
+.leaflet-interactive {
+    outline: none !important;
+}
+
+/* Prevent focus ring on click */
+.leaflet-interactive:focus {
+    outline: none !important;
+}
+
+/* Also disable SVG focus */
+path.leaflet-interactive {
+    outline: none !important;
+}
+
+</style>
+    
+            <div class="folium-map" id="map_151c038c2c1d094d1b9a0feacead93de" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_151c038c2c1d094d1b9a0feacead93de = L.map(
+                "map_151c038c2c1d094d1b9a0feacead93de",
+                {
+                    center: [22.5726, 88.3639],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5c5a682f82b853717ac08dbf7be0183e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5c5a682f82b853717ac08dbf7be0183e.addTo(map_151c038c2c1d094d1b9a0feacead93de);
+        
+    
+        function geo_json_45cb675d0ad9c579cf43f582a914f72f_styler(feature) {
+            switch(feature.properties.AC_NO) {
+                case 158: 
+                    return {"color": "#555555", "fillColor": "#f5774fff", "fillOpacity": 0.62, "weight": 0.55};
+                case 159: 
+                    return {"color": "#555555", "fillColor": "#fdb680ff", "fillOpacity": 0.62, "weight": 0.55};
+                case 160: 
+                    return {"color": "#555555", "fillColor": "#fdbe87ff", "fillOpacity": 0.62, "weight": 0.55};
+                case 161: 
+                    return {"color": "#555555", "fillColor": "#f87f53ff", "fillOpacity": 0.62, "weight": 0.55};
+                case 162: 
+                    return {"color": "#555555", "fillColor": "#960000ff", "fillOpacity": 0.62, "weight": 0.55};
+                case 163: 
+                    return {"color": "#555555", "fillColor": "#fdc28bff", "fillOpacity": 0.62, "weight": 0.55};
+                case 164: 
+                    return {"color": "#888888", "fillColor": "#e6e6e6", "fillOpacity": 0.3, "weight": 0.4};
+                case 165: 
+                    return {"color": "#555555", "fillColor": "#7f0000ff", "fillOpacity": 0.62, "weight": 0.55};
+                case 166: 
+                    return {"color": "#555555", "fillColor": "#fd935fff", "fillOpacity": 0.62, "weight": 0.55};
+                case 167: 
+                    return {"color": "#555555", "fillColor": "#fdc68fff", "fillOpacity": 0.62, "weight": 0.55};
+                default:
+                    return {"color": "#555555", "fillColor": "#fd9560ff", "fillOpacity": 0.62, "weight": 0.55};
+            }
+        }
+        function geo_json_45cb675d0ad9c579cf43f582a914f72f_highlighter(feature) {
+            switch(feature.properties.AC_NO) {
+                default:
+                    return {"color": "#333333", "fillOpacity": 0.75, "weight": 1.0};
+            }
+        }
+
+        function geo_json_45cb675d0ad9c579cf43f582a914f72f_onEachFeature(feature, layer) {
+
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_45cb675d0ad9c579cf43f582a914f72f.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_45cb675d0ad9c579cf43f582a914f72f_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_45cb675d0ad9c579cf43f582a914f72f = L.geoJson(null, {
+                onEachFeature: geo_json_45cb675d0ad9c579cf43f582a914f72f_onEachFeature,
+            
+                style: geo_json_45cb675d0ad9c579cf43f582a914f72f_styler,
+            ...{
+}
+        });
+
+        function geo_json_45cb675d0ad9c579cf43f582a914f72f_add (data) {
+            geo_json_45cb675d0ad9c579cf43f582a914f72f
+                .addData(data);
+        }
+            geo_json_45cb675d0ad9c579cf43f582a914f72f_add({"crs": {"properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}, "type": "name"}, "features": [{"geometry": {"coordinates": [[[88.2716789448275, 22.556798488859215], [88.30954013946592, 22.549808389545603], [88.32165076087398, 22.552393525840614], [88.3240115936602, 22.545046607015365], [88.31154042505062, 22.536725906775246], [88.32069076606604, 22.53397148569553], [88.31741321474811, 22.51859529373786], [88.31483979751869, 22.510032629102625], [88.29654490532317, 22.51534651173216], [88.28905045631359, 22.51930718987495], [88.28261011256672, 22.547387946096876], [88.27567078627783, 22.547921914065114], [88.2716789448275, 22.556798488859215]]], "type": "Polygon"}, "properties": {"AC_NAME": "KOLKATA PORT", "AC_NO": 158, "DIST_NAME": "KOLKATA", "DT_CODE": 17, "Deletion_Percent": "26.18%", "OBJECTID": 23, "PC_ID": 1923, "PC_NAME": "KOLKATA DAKSHIN", "PC_NO": 23, "STATUS": null, "ST_CODE": 19, "ST_NAME": "WEST BENGAL", "Shape_Area": 0.00132610238, "Shape_Leng": 0.18084231102, "popup_html": "\n    \u003ch4\u003eKOLKATA PORT\u003c/h4\u003e\n\n    \u003cb\u003eOverall Deletions\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Voters (2025)\u003c/td\u003e\u003ctd\u003e243,452\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Deleted\u003c/td\u003e\u003ctd\u003e63,730\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e\u003cb\u003eDeletion %\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003e26.18%\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReligion-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Muslims\u003c/td\u003e\u003ctd\u003e38.34%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Non-Muslims\u003c/td\u003e\u003ctd\u003e61.65%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eGender-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Females\u003c/td\u003e\u003ctd\u003e37.97%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Males\u003c/td\u003e\u003ctd\u003e62.02%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReasons for Deletion\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Already Enrolled\u003c/td\u003e\u003ctd\u003e1.01%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Death\u003c/td\u003e\u003ctd\u003e21.06%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Permanently Shifted\u003c/td\u003e\u003ctd\u003e46.06%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Untraceable / Absent\u003c/td\u003e\u003ctd\u003e31.86%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n    "}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.33471974212245, 22.563587026719972], [88.34481061481807, 22.56418343821514], [88.34165553497502, 22.555702937440685], [88.34722507867451, 22.554744073080542], [88.34791530025097, 22.558231143952185], [88.3558915187786, 22.55304461611621], [88.3541610765725, 22.548624271093274], [88.36006011208457, 22.54465584888834], [88.35842030895014, 22.53954976451007], [88.35354077098987, 22.53943180943054], [88.35085137269277, 22.523533820029797], [88.33708852401622, 22.52330119149684], [88.33690693740527, 22.508754373215822], [88.31741321474811, 22.51859529373786], [88.32069076606604, 22.53397148569553], [88.31154042505062, 22.536725906775246], [88.3240115936602, 22.545046607015365], [88.32165076087398, 22.552393525840614], [88.3347339972762, 22.570127606204096], [88.33471974212245, 22.563587026719972]]], "type": "Polygon"}, "properties": {"AC_NAME": "BHABANIPUR", "AC_NO": 159, "DIST_NAME": "KOLKATA", "DT_CODE": 17, "Deletion_Percent": "21.71%", "OBJECTID": 23, "PC_ID": 1923, "PC_NAME": "KOLKATA DAKSHIN", "PC_NO": 23, "STATUS": null, "ST_CODE": 19, "ST_NAME": "WEST BENGAL", "Shape_Area": 0.00145295914, "Shape_Leng": 0.20281639421, "popup_html": "\n    \u003ch4\u003eBHABANIPUR\u003c/h4\u003e\n\n    \u003cb\u003eOverall Deletions\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Voters (2025)\u003c/td\u003e\u003ctd\u003e206,295\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Deleted\u003c/td\u003e\u003ctd\u003e44,787\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e\u003cb\u003eDeletion %\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003e21.71%\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReligion-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Muslims\u003c/td\u003e\u003ctd\u003e22.66%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Non-Muslims\u003c/td\u003e\u003ctd\u003e77.33%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eGender-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Females\u003c/td\u003e\u003ctd\u003e36.55%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Males\u003c/td\u003e\u003ctd\u003e63.04%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReasons for Deletion\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Already Enrolled\u003c/td\u003e\u003ctd\u003e2.45%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Death\u003c/td\u003e\u003ctd\u003e24.26%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Permanently Shifted\u003c/td\u003e\u003ctd\u003e27.92%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Untraceable / Absent\u003c/td\u003e\u003ctd\u003e44.98%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n    "}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.36590837637056, 22.516317212969057], [88.37053674897186, 22.51338323504831], [88.36859310898484, 22.504838655779395], [88.36533407920444, 22.49957496880984], [88.3476141406801, 22.499297604400965], [88.32930059834399, 22.508014711409828], [88.31483979751869, 22.510032629102625], [88.31741321474811, 22.51859529373786], [88.33690693740527, 22.508754373215822], [88.33708852401622, 22.52330119149684], [88.35085137269277, 22.523533820029797], [88.35063062510335, 22.516230110930906], [88.36200947265911, 22.516662953732407], [88.3594891855775, 22.5232269173884], [88.3663829944797, 22.524029605481985], [88.36590837637056, 22.516317212969057]]], "type": "Polygon"}, "properties": {"AC_NAME": "RASHBEHARI", "AC_NO": 160, "DIST_NAME": "KOLKATA", "DT_CODE": 17, "Deletion_Percent": "21.00%", "OBJECTID": 23, "PC_ID": 1923, "PC_NAME": "KOLKATA DAKSHIN", "PC_NO": 23, "STATUS": null, "ST_CODE": 19, "ST_NAME": "WEST BENGAL", "Shape_Area": 0.00077078617, "Shape_Leng": 0.17252244682, "popup_html": "\n    \u003ch4\u003eRASHBEHARI\u003c/h4\u003e\n\n    \u003cb\u003eOverall Deletions\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Voters (2025)\u003c/td\u003e\u003ctd\u003e202,519\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Deleted\u003c/td\u003e\u003ctd\u003e42,519\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e\u003cb\u003eDeletion %\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003e21.00%\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReligion-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Muslims\u003c/td\u003e\u003ctd\u003e5.95%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Non-Muslims\u003c/td\u003e\u003ctd\u003e94.05%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eGender-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Females\u003c/td\u003e\u003ctd\u003e44.32%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Males\u003c/td\u003e\u003ctd\u003e55.68%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReasons for Deletion\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Already Enrolled\u003c/td\u003e\u003ctd\u003e0.75%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Death\u003c/td\u003e\u003ctd\u003e33.28%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Permanently Shifted\u003c/td\u003e\u003ctd\u003e45.34%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Untraceable / Absent\u003c/td\u003e\u003ctd\u003e20.62%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n    "}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.36611854973137, 22.55344493673448], [88.3657567443783, 22.549580102939444], [88.37187338434927, 22.549624950331236], [88.37590920984223, 22.535992659833425], [88.38141728218187, 22.536488943509994], [88.38371562557575, 22.53220339157332], [88.37687083152372, 22.525653114699537], [88.37247711992319, 22.527199602379824], [88.37053674897186, 22.51338323504831], [88.36590837637056, 22.516317212969057], [88.3663829944797, 22.524029605481985], [88.3594891855775, 22.5232269173884], [88.36200947265911, 22.516662953732407], [88.35063062510335, 22.516230110930906], [88.35085137269277, 22.523533820029797], [88.35354077098987, 22.53943180943054], [88.35842030895014, 22.53954976451007], [88.36006011208457, 22.54465584888834], [88.3541610765725, 22.548624271093274], [88.3558915187786, 22.55304461611621], [88.36284111802325, 22.550935179814758], [88.3651139620398, 22.55471979048599], [88.36611854973137, 22.55344493673448]]], "type": "Polygon"}, "properties": {"AC_NAME": "BALLYGUNGE", "AC_NO": 161, "DIST_NAME": "KOLKATA", "DT_CODE": 17, "Deletion_Percent": "25.54%", "OBJECTID": 23, "PC_ID": 1923, "PC_NAME": "KOLKATA DAKSHIN", "PC_NO": 23, "STATUS": null, "ST_CODE": 19, "ST_NAME": "WEST BENGAL", "Shape_Area": 0.00072301434, "Shape_Leng": 0.16009039676, "popup_html": "\n    \u003ch4\u003eBALLYGUNGE\u003c/h4\u003e\n\n    \u003cb\u003eOverall Deletions\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Voters (2025)\u003c/td\u003e\u003ctd\u003e255,190\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Deleted\u003c/td\u003e\u003ctd\u003e65,171\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e\u003cb\u003eDeletion %\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003e25.54%\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReligion-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Muslims\u003c/td\u003e\u003ctd\u003e44.16%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Non-Muslims\u003c/td\u003e\u003ctd\u003e55.84%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eGender-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Females\u003c/td\u003e\u003ctd\u003e39.56%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Males\u003c/td\u003e\u003ctd\u003e60.44%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReasons for Deletion\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Already Enrolled\u003c/td\u003e\u003ctd\u003e1.21%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Death\u003c/td\u003e\u003ctd\u003e29.12%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Permanently Shifted\u003c/td\u003e\u003ctd\u003e30.57%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Untraceable / Absent\u003c/td\u003e\u003ctd\u003e39.10%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n    "}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.3508386068163, 22.57280856526313], [88.35904190955654, 22.577681128081622], [88.36330138565046, 22.57665222092328], [88.36133694434454, 22.57115650886584], [88.37280507389511, 22.570674894930505], [88.36914621452621, 22.56437034341667], [88.3651139620398, 22.55471979048599], [88.36284111802325, 22.550935179814758], [88.3558915187786, 22.55304461611621], [88.34791530025097, 22.558231143952185], [88.34722507867451, 22.554744073080542], [88.34165553497502, 22.555702937440685], [88.34481061481807, 22.56418343821514], [88.33471974212245, 22.563587026719972], [88.3347339972762, 22.570127606204096], [88.34364356909549, 22.58077767734801], [88.3527321239884, 22.57685350718367], [88.3508386068163, 22.57280856526313]]], "type": "Polygon"}, "properties": {"AC_NAME": "CHOWRANGEE", "AC_NO": 162, "DIST_NAME": "KOLKATA", "DT_CODE": 17, "Deletion_Percent": "35.46%", "OBJECTID": 24, "PC_ID": 1924, "PC_NAME": "KOLKATA UTTAR", "PC_NO": 24, "STATUS": null, "ST_CODE": 19, "ST_NAME": "WEST BENGAL", "Shape_Area": 0.00064746042, "Shape_Leng": 0.13333255182, "popup_html": "\n    \u003ch4\u003eCHOWRANGEE\u003c/h4\u003e\n\n    \u003cb\u003eOverall Deletions\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Voters (2025)\u003c/td\u003e\u003ctd\u003e210,246\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Deleted\u003c/td\u003e\u003ctd\u003e74,553\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e\u003cb\u003eDeletion %\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003e35.46%\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReligion-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Muslims\u003c/td\u003e\u003ctd\u003e35.86%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Non-Muslims\u003c/td\u003e\u003ctd\u003e64.14%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eGender-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Females\u003c/td\u003e\u003ctd\u003e28.61%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Males\u003c/td\u003e\u003ctd\u003e69.85%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReasons for Deletion\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Already Enrolled\u003c/td\u003e\u003ctd\u003e0.42%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Death\u003c/td\u003e\u003ctd\u003e18.26%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Permanently Shifted\u003c/td\u003e\u003ctd\u003e33.20%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Untraceable / Absent\u003c/td\u003e\u003ctd\u003e46.58%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n    "}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.39739709819759, 22.55082405148886], [88.38811602543427, 22.543231855166027], [88.38371562557575, 22.53220339157332], [88.38141728218187, 22.536488943509994], [88.37590920984223, 22.535992659833425], [88.37187338434927, 22.549624950331236], [88.3657567443783, 22.549580102939444], [88.36611854973137, 22.55344493673448], [88.3651139620398, 22.55471979048599], [88.36914621452621, 22.56437034341667], [88.39739709819759, 22.55082405148886]]], "type": "Polygon"}, "properties": {"AC_NAME": "ENTALLY", "AC_NO": 163, "DIST_NAME": "KOLKATA", "DT_CODE": 17, "Deletion_Percent": "20.54%", "OBJECTID": 24, "PC_ID": 1924, "PC_NAME": "KOLKATA UTTAR", "PC_NO": 24, "STATUS": null, "ST_CODE": 19, "ST_NAME": "WEST BENGAL", "Shape_Area": 0.00047441111, "Shape_Leng": 0.10188668524, "popup_html": "\n    \u003ch4\u003eENTALLY\u003c/h4\u003e\n\n    \u003cb\u003eOverall Deletions\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Voters (2025)\u003c/td\u003e\u003ctd\u003e238,937\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Deleted\u003c/td\u003e\u003ctd\u003e49,084\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e\u003cb\u003eDeletion %\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003e20.54%\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReligion-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Muslims\u003c/td\u003e\u003ctd\u003e37.02%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Non-Muslims\u003c/td\u003e\u003ctd\u003e62.98%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eGender-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Females\u003c/td\u003e\u003ctd\u003e41.56%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Males\u003c/td\u003e\u003ctd\u003e58.43%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReasons for Deletion\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Already Enrolled\u003c/td\u003e\u003ctd\u003e1.94%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Death\u003c/td\u003e\u003ctd\u003e28.11%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Permanently Shifted\u003c/td\u003e\u003ctd\u003e11.00%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Untraceable / Absent\u003c/td\u003e\u003ctd\u003e58.96%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n    "}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.4081584667399, 22.560707956906754], [88.40030158105316, 22.55902840014062], [88.39739709819759, 22.55082405148886], [88.36914621452621, 22.56437034341667], [88.37280507389511, 22.570674894930505], [88.37440681322391, 22.583528832089996], [88.38965233368833, 22.57751399357602], [88.39312009071966, 22.57009149572599], [88.40421512302959, 22.568376716112596], [88.40807115515975, 22.56084989330799], [88.4081584667399, 22.560707956906754]]], "type": "Polygon"}, "properties": {"AC_NAME": "BELEGHATA", "AC_NO": 164, "DIST_NAME": "KOLKATA", "DT_CODE": 17, "Deletion_Percent": "NA", "OBJECTID": 24, "PC_ID": 1924, "PC_NAME": "KOLKATA UTTAR", "PC_NO": 24, "STATUS": null, "ST_CODE": 19, "ST_NAME": "WEST BENGAL", "Shape_Area": 0.00061960457, "Shape_Leng": 0.1127433515, "popup_html": "\u003ch4\u003eBELEGHATA\u003c/h4\u003e\u003ci\u003eData not available\u003c/i\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.37416329569959, 22.584539041443634], [88.37440681322391, 22.583528832089996], [88.37280507389511, 22.570674894930505], [88.36133694434454, 22.57115650886584], [88.36330138565046, 22.57665222092328], [88.35904190955654, 22.577681128081622], [88.3508386068163, 22.57280856526313], [88.3527321239884, 22.57685350718367], [88.34364356909549, 22.58077767734801], [88.34585079317964, 22.587556029487246], [88.36674744294021, 22.584495782254578], [88.36786099518883, 22.58789822872035], [88.37416329569959, 22.584539041443634]]], "type": "Polygon"}, "properties": {"AC_NAME": "JORASANKO", "AC_NO": 165, "DIST_NAME": "KOLKATA", "DT_CODE": 17, "Deletion_Percent": "36.85%", "OBJECTID": 24, "PC_ID": 1924, "PC_NAME": "KOLKATA UTTAR", "PC_NO": 24, "STATUS": null, "ST_CODE": 19, "ST_NAME": "WEST BENGAL", "Shape_Area": 0.00033109408, "Shape_Leng": 0.09856589033, "popup_html": "\n    \u003ch4\u003eJORASANKO\u003c/h4\u003e\n\n    \u003cb\u003eOverall Deletions\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Voters (2025)\u003c/td\u003e\u003ctd\u003e197,839\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Deleted\u003c/td\u003e\u003ctd\u003e72,900\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e\u003cb\u003eDeletion %\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003e36.85%\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReligion-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Muslims\u003c/td\u003e\u003ctd\u003e22.39%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Non-Muslims\u003c/td\u003e\u003ctd\u003e77.60%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eGender-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Females\u003c/td\u003e\u003ctd\u003e33.67%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Males\u003c/td\u003e\u003ctd\u003e66.32%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReasons for Deletion\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Already Enrolled\u003c/td\u003e\u003ctd\u003e1.29%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Death\u003c/td\u003e\u003ctd\u003e21.20%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Permanently Shifted\u003c/td\u003e\u003ctd\u003e22.44%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Untraceable / Absent\u003c/td\u003e\u003ctd\u003e55.05%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n    "}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.36786099518883, 22.58789822872035], [88.36674744294021, 22.584495782254578], [88.34585079317964, 22.587556029487246], [88.35878143801301, 22.612315453595386], [88.36536583246726, 22.609216721674443], [88.37244483875838, 22.60517296775828], [88.36786099518883, 22.58789822872035]]], "type": "Polygon"}, "properties": {"AC_NAME": "SHYAMPUKUR", "AC_NO": 166, "DIST_NAME": "KOLKATA", "DT_CODE": 17, "Deletion_Percent": "24.06%", "OBJECTID": 24, "PC_ID": 1924, "PC_NAME": "KOLKATA UTTAR", "PC_NO": 24, "STATUS": null, "ST_CODE": 19, "ST_NAME": "WEST BENGAL", "Shape_Area": 0.000444252, "Shape_Leng": 0.08593441741, "popup_html": "\n    \u003ch4\u003eSHYAMPUKUR\u003c/h4\u003e\n\n    \u003cb\u003eOverall Deletions\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Voters (2025)\u003c/td\u003e\u003ctd\u003e175,817\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Deleted\u003c/td\u003e\u003ctd\u003e42,303\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e\u003cb\u003eDeletion %\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003e24.06%\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReligion-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Muslims\u003c/td\u003e\u003ctd\u003e4.93%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Non-Muslims\u003c/td\u003e\u003ctd\u003e95.07%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eGender-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Females\u003c/td\u003e\u003ctd\u003e39.55%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Males\u003c/td\u003e\u003ctd\u003e60.44%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReasons for Deletion\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Already Enrolled\u003c/td\u003e\u003ctd\u003e1.39%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Death\u003c/td\u003e\u003ctd\u003e35.31%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Permanently Shifted\u003c/td\u003e\u003ctd\u003e37.73%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Untraceable / Absent\u003c/td\u003e\u003ctd\u003e25.57%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n    "}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.40866279934875, 22.561887070631826], [88.40807115515975, 22.56084989330799], [88.40421512302959, 22.568376716112596], [88.39312009071966, 22.57009149572599], [88.38965233368833, 22.57751399357602], [88.37440681322391, 22.583528832089996], [88.37416329569959, 22.584539041443634], [88.36786099518883, 22.58789822872035], [88.37244483875838, 22.60517296775828], [88.39584753933252, 22.591916072268987], [88.40870605224256, 22.56241518401356], [88.40866279934875, 22.561887070631826]]], "type": "Polygon"}, "properties": {"AC_NAME": "MANIKTALA", "AC_NO": 167, "DIST_NAME": "KOLKATA", "DT_CODE": 17, "Deletion_Percent": "20.05%", "OBJECTID": 24, "PC_ID": 1924, "PC_NAME": "KOLKATA UTTAR", "PC_NO": 24, "STATUS": null, "ST_CODE": 19, "ST_NAME": "WEST BENGAL", "Shape_Area": 0.00063728474, "Shape_Leng": 0.13112098425, "popup_html": "\n    \u003ch4\u003eMANIKTALA\u003c/h4\u003e\n\n    \u003cb\u003eOverall Deletions\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Voters (2025)\u003c/td\u003e\u003ctd\u003e208,799\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Deleted\u003c/td\u003e\u003ctd\u003e41,870\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e\u003cb\u003eDeletion %\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003e20.05%\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReligion-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Muslims\u003c/td\u003e\u003ctd\u003e5.53%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Non-Muslims\u003c/td\u003e\u003ctd\u003e94.47%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eGender-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Females\u003c/td\u003e\u003ctd\u003e42.79%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Males\u003c/td\u003e\u003ctd\u003e57.20%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReasons for Deletion\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Already Enrolled\u003c/td\u003e\u003ctd\u003e1.22%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Death\u003c/td\u003e\u003ctd\u003e31.68%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Permanently Shifted\u003c/td\u003e\u003ctd\u003e46.65%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Untraceable / Absent\u003c/td\u003e\u003ctd\u003e20.46%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n    "}, "type": "Feature"}, {"geometry": {"coordinates": [[[88.38981074836738, 22.62907786325286], [88.39277458737735, 22.627105063647832], [88.3936791344845, 22.604806836666228], [88.39193826014264, 22.596458709801652], [88.39584753933252, 22.591916072268987], [88.37244483875838, 22.60517296775828], [88.36536583246726, 22.609216721674443], [88.36598478457023, 22.614944070312617], [88.36586932061272, 22.616598651106926], [88.36115478576482, 22.63135146989447], [88.38981074836738, 22.62907786325286]]], "type": "Polygon"}, "properties": {"AC_NAME": "KASHIPURBELGACHHIA", "AC_NO": 168, "DIST_NAME": "KOLKATA", "DT_CODE": 17, "Deletion_Percent": "23.96%", "OBJECTID": 24, "PC_ID": 1924, "PC_NAME": "KOLKATA UTTAR", "PC_NO": 24, "STATUS": null, "ST_CODE": 19, "ST_NAME": "WEST BENGAL", "Shape_Area": 0.00081545187, "Shape_Leng": 0.12710020219, "popup_html": "\n    \u003ch4\u003eKASHIPURBELGACHHIA\u003c/h4\u003e\n\n    \u003cb\u003eOverall Deletions\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Voters (2025)\u003c/td\u003e\u003ctd\u003e222,749\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003eTotal Deleted\u003c/td\u003e\u003ctd\u003e53,360\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e\u003cb\u003eDeletion %\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003e23.96%\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReligion-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Muslims\u003c/td\u003e\u003ctd\u003e17.84%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Non-Muslims\u003c/td\u003e\u003ctd\u003e82.16%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eGender-wise\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Females\u003c/td\u003e\u003ctd\u003e44.45%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Deleted Males\u003c/td\u003e\u003ctd\u003e55.55%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n\n    \u003cbr\u003e\u003cb\u003eReasons for Deletion\u003c/b\u003e\n    \u003ctable style=\"width:100%; border-collapse:collapse;\" border=\"1\"\u003e\n        \u003ctr\u003e\u003ctd\u003e% Already Enrolled\u003c/td\u003e\u003ctd\u003e1.01%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Death\u003c/td\u003e\u003ctd\u003e34.31%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Permanently Shifted\u003c/td\u003e\u003ctd\u003e33.34%\u003c/td\u003e\u003c/tr\u003e\n        \u003ctr\u003e\u003ctd\u003e% Untraceable / Absent\u003c/td\u003e\u003ctd\u003e31.34%\u003c/td\u003e\u003c/tr\u003e\n    \u003c/table\u003e\n    "}, "type": "Feature"}], "name": "India_AC", "type": "FeatureCollection"});
+
+        
+    
+    geo_json_45cb675d0ad9c579cf43f582a914f72f.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["AC_NAME", "Deletion_Percent"];
+    let aliases = ["Assembly:", "Deletion %:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_45cb675d0ad9c579cf43f582a914f72f.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["popup_html"];
+    let aliases = ["popup_html"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "maxWidth": 460,
+  "offset": [-20, -15],
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_45cb675d0ad9c579cf43f582a914f72f.addTo(map_151c038c2c1d094d1b9a0feacead93de);
+        
+    
+    var color_map_4c540befff686c64f3a7a949589f36cb = {};
+
+    
+    color_map_4c540befff686c64f3a7a949589f36cb.color = d3.scale.threshold()
+              .domain([12.111942267686965, 12.161513814641621, 12.211085361596275, 12.260656908550931, 12.310228455505587, 12.359800002460242, 12.409371549414898, 12.458943096369554, 12.508514643324208, 12.558086190278864, 12.60765773723352, 12.657229284188174, 12.70680083114283, 12.756372378097486, 12.80594392505214, 12.855515472006797, 12.905087018961453, 12.954658565916107, 13.004230112870763, 13.05380165982542, 13.103373206780075, 13.15294475373473, 13.202516300689386, 13.252087847644042, 13.301659394598696, 13.351230941553352, 13.400802488508008, 13.450374035462662, 13.499945582417318, 13.549517129371974, 13.599088676326629, 13.648660223281285, 13.69823177023594, 13.747803317190595, 13.797374864145251, 13.846946411099907, 13.896517958054561, 13.946089505009217, 13.995661051963873, 14.045232598918528, 14.094804145873184, 14.14437569282784, 14.193947239782494, 14.24351878673715, 14.293090333691806, 14.34266188064646, 14.392233427601116, 14.441804974555772, 14.491376521510427, 14.540948068465083, 14.590519615419739, 14.640091162374393, 14.689662709329049, 14.739234256283705, 14.788805803238361, 14.838377350193015, 14.887948897147671, 14.937520444102326, 14.987091991056982, 15.036663538011638, 15.086235084966294, 15.135806631920948, 15.185378178875604, 15.23494972583026, 15.284521272784914, 15.33409281973957, 15.383664366694227, 15.43323591364888, 15.482807460603537, 15.532379007558193, 15.581950554512847, 15.631522101467503, 15.68109364842216, 15.730665195376814, 15.78023674233147, 15.829808289286126, 15.87937983624078, 15.928951383195436, 15.978522930150092, 16.028094477104748, 16.077666024059404, 16.127237571014057, 16.176809117968713, 16.22638066492337, 16.275952211878025, 16.32552375883268, 16.375095305787333, 16.42466685274199, 16.474238399696645, 16.5238099466513, 16.573381493605957, 16.622953040560613, 16.67252458751527, 16.722096134469922, 16.771667681424578, 16.821239228379234, 16.87081077533389, 16.920382322288546, 16.969953869243202, 17.019525416197858, 17.06909696315251, 17.118668510107167, 17.168240057061823, 17.21781160401648, 17.267383150971135, 17.316954697925787, 17.366526244880443, 17.4160977918351, 17.465669338789755, 17.51524088574441, 17.564812432699068, 17.614383979653724, 17.663955526608376, 17.713527073563032, 17.763098620517688, 17.812670167472344, 17.862241714427, 17.911813261381653, 17.96138480833631, 18.010956355290965, 18.06052790224562, 18.110099449200277, 18.159670996154933, 18.20924254310959, 18.25881409006424, 18.308385637018898, 18.357957183973554, 18.40752873092821, 18.457100277882866, 18.50667182483752, 18.556243371792174, 18.60581491874683, 18.655386465701486, 18.704958012656142, 18.7545295596108, 18.804101106565454, 18.853672653520107, 18.903244200474763, 18.95281574742942, 19.002387294384075, 19.05195884133873, 19.101530388293387, 19.15110193524804, 19.200673482202696, 19.25024502915735, 19.299816576112008, 19.349388123066664, 19.39895967002132, 19.448531216975972, 19.49810276393063, 19.547674310885284, 19.59724585783994, 19.646817404794596, 19.696388951749253, 19.74596049870391, 19.79553204565856, 19.845103592613217, 19.894675139567873, 19.94424668652253, 19.993818233477185, 20.04338978043184, 20.092961327386494, 20.14253287434115, 20.192104421295806, 20.241675968250462, 20.291247515205118, 20.340819062159774, 20.390390609114426, 20.439962156069083, 20.48953370302374, 20.539105249978395, 20.58867679693305, 20.638248343887703, 20.687819890842363, 20.737391437797015, 20.78696298475167, 20.836534531706327, 20.88610607866098, 20.93567762561564, 20.985249172570292, 21.034820719524948, 21.084392266479604, 21.13396381343426, 21.183535360388916, 21.23310690734357, 21.282678454298228, 21.33225000125288, 21.381821548207537, 21.431393095162193, 21.480964642116845, 21.530536189071505, 21.580107736026157, 21.629679282980813, 21.67925082993547, 21.728822376890125, 21.77839392384478, 21.827965470799437, 21.877537017754094, 21.927108564708746, 21.976680111663406, 22.026251658618058, 22.075823205572714, 22.12539475252737, 22.174966299482023, 22.224537846436682, 22.274109393391335, 22.32368094034599, 22.373252487300647, 22.422824034255303, 22.47239558120996, 22.52196712816461, 22.57153867511927, 22.621110222073924, 22.67068176902858, 22.720253315983236, 22.769824862937888, 22.819396409892548, 22.8689679568472, 22.918539503801856, 22.968111050756512, 23.01768259771117, 23.067254144665824, 23.116825691620477, 23.166397238575136, 23.21596878552979, 23.265540332484445, 23.3151118794391, 23.364683426393754, 23.414254973348413, 23.463826520303066, 23.51339806725772, 23.562969614212378, 23.612541161167034, 23.66211270812169, 23.711684255076342, 23.761255802031002, 23.810827348985654, 23.86039889594031, 23.909970442894966, 23.95954198984962, 24.00911353680428, 24.05868508375893, 24.108256630713587, 24.157828177668243, 24.2073997246229, 24.256971271577555, 24.30654281853221, 24.356114365486867, 24.40568591244152, 24.45525745939618, 24.504829006350832, 24.554400553305484, 24.603972100260144, 24.653543647214796, 24.703115194169452, 24.75268674112411, 24.802258288078765, 24.85182983503342, 24.901401381988077, 24.950972928942733, 25.000544475897385, 25.050116022852045, 25.099687569806697, 25.14925911676135, 25.19883066371601, 25.248402210670662, 25.297973757625318, 25.347545304579974, 25.39711685153463, 25.446688398489286, 25.496259945443942, 25.545831492398598, 25.59540303935325, 25.64497458630791, 25.694546133262563, 25.744117680217215, 25.793689227171875, 25.843260774126527, 25.892832321081183, 25.94240386803584, 25.991975414990495, 26.04154696194515, 26.091118508899807, 26.140690055854463, 26.190261602809116, 26.239833149763776, 26.289404696718428, 26.33897624367308, 26.38854779062774, 26.438119337582393, 26.48769088453705, 26.537262431491705, 26.58683397844636, 26.636405525401017, 26.685977072355673, 26.73554861931033, 26.78512016626498, 26.83469171321964, 26.884263260174293, 26.933834807128946, 26.983406354083606, 27.032977901038258, 27.082549447992914, 27.13212099494757, 27.181692541902226, 27.231264088856882, 27.28083563581154, 27.330407182766194, 27.379978729720847, 27.429550276675506, 27.47912182363016, 27.528693370584815, 27.57826491753947, 27.627836464494123, 27.677408011448783, 27.726979558403436, 27.77655110535809, 27.826122652312748, 27.875694199267404, 27.92526574622206, 27.974837293176716, 28.024408840131372, 28.073980387086024, 28.123551934040684, 28.173123480995336, 28.22269502794999, 28.27226657490465, 28.3218381218593, 28.37140966881396, 28.420981215768613, 28.470552762723273, 28.520124309677925, 28.569695856632578, 28.619267403587237, 28.66883895054189, 28.718410497496542, 28.7679820444512, 28.81755359140586, 28.867125138360514, 28.916696685315166, 28.966268232269826, 29.01583977922448, 29.06541132617913, 29.11498287313379, 29.164554420088443, 29.214125967043103, 29.263697513997755, 29.313269060952408, 29.362840607907067, 29.412412154861727, 29.46198370181638, 29.51155524877103, 29.56112679572569, 29.610698342680344, 29.660269889634996, 29.709841436589656, 29.75941298354431, 29.808984530498968, 29.85855607745362, 29.908127624408273, 29.957699171362933, 30.007270718317592, 30.056842265272245, 30.106413812226897, 30.155985359181557, 30.20555690613621, 30.25512845309086, 30.30470000004552, 30.354271547000174, 30.403843093954833, 30.453414640909486, 30.50298618786414, 30.552557734818798, 30.602129281773458, 30.65170082872811, 30.701272375682763, 30.750843922637422, 30.800415469592075, 30.849987016546727, 30.899558563501387, 30.94913011045604, 30.9987016574107, 31.04827320436535, 31.097844751320004, 31.147416298274663, 31.196987845229323, 31.246559392183975, 31.296130939138628, 31.345702486093288, 31.39527403304794, 31.4448455800026, 31.494417126957252, 31.54398867391191, 31.593560220866564, 31.643131767821217, 31.692703314775876, 31.74227486173053, 31.79184640868519, 31.84141795563984, 31.890989502594493, 31.940561049549153, 31.990132596503805, 32.039704143458465, 32.08927569041312, 32.13884723736778, 32.18841878432243, 32.23799033127708, 32.28756187823174, 32.337133425186394, 32.386704972141054, 32.436276519095706, 32.48584806605036, 32.53541961300502, 32.58499115995967, 32.63456270691433, 32.68413425386898, 32.73370580082364, 32.783277347778295, 32.83284889473295, 32.88242044168761, 32.93199198864226, 32.98156353559692, 33.03113508255157, 33.080706629506224, 33.130278176460884, 33.179849723415536, 33.229421270370196, 33.27899281732485, 33.32856436427951, 33.37813591123416, 33.42770745818881, 33.47727900514347, 33.526850552098125, 33.576422099052785, 33.62599364600744, 33.67556519296209, 33.72513673991675, 33.7747082868714, 33.82427983382606, 33.873851380780714, 33.92342292773537, 33.972994474690026, 34.02256602164468, 34.07213756859934, 34.12170911555399, 34.17128066250865, 34.2208522094633, 34.270423756417955, 34.319995303372615, 34.36956685032727, 34.41913839728193, 34.46870994423658, 34.51828149119124, 34.56785303814589, 34.617424585100544, 34.6669961320552, 34.716567679009856, 34.766139225964515, 34.81571077291917, 34.86528231987382, 34.91485386682848, 34.96442541378313, 35.01399696073779, 35.063568507692445, 35.113140054647104, 35.16271160160176, 35.21228314855641, 35.26185469551107, 35.31142624246572, 35.36099778942038, 35.41056933637503, 35.460140883329686, 35.509712430284345, 35.559283977239, 35.60885552419366, 35.65842707114831, 35.70799861810297, 35.75757016505762, 35.807141712012275, 35.856713258966934, 35.90628480592159, 35.955856352876246, 36.0054278998309, 36.05499944678555, 36.10457099374021, 36.15414254069486, 36.20371408764952, 36.253285634604175, 36.302857181558835, 36.35242872851349, 36.40200027546814, 36.4515718224228, 36.50114336937746, 36.55071491633211, 36.600286463286764, 36.649858010241424, 36.699429557196076, 36.74900110415073, 36.79857265110539, 36.84814419806004])
+              .range(['#fff7ecff', '#fff7ecff', '#fff7ebff', '#fff7ebff', '#fff7eaff', '#fff6eaff', '#fff6e9ff', '#fff6e8ff', '#fff6e8ff', '#fff5e7ff', '#fff5e7ff', '#fff5e6ff', '#fff5e5ff', '#fff4e5ff', '#fff4e4ff', '#fff4e4ff', '#fff4e3ff', '#fff3e3ff', '#fff3e2ff', '#fff3e1ff', '#fff3e1ff', '#fff2e0ff', '#fff2e0ff', '#fff2dfff', '#fff2dfff', '#fff1deff', '#fff1ddff', '#fff1ddff', '#fff1dcff', '#fff0dcff', '#fff0dbff', '#fff0daff', '#fff0daff', '#fff0d9ff', '#ffefd9ff', '#ffefd8ff', '#ffefd8ff', '#ffefd7ff', '#ffeed6ff', '#ffeed6ff', '#ffeed5ff', '#ffeed5ff', '#ffedd4ff', '#ffedd4ff', '#ffedd3ff', '#ffedd2ff', '#ffecd2ff', '#ffecd1ff', '#ffecd1ff', '#ffecd0ff', '#ffebcfff', '#ffebcfff', '#ffebceff', '#ffebceff', '#ffeacdff', '#ffeacdff', '#ffeaccff', '#ffeacbff', '#ffe9cbff', '#ffe9caff', '#ffe9caff', '#ffe9c9ff', '#ffe9c9ff', '#fee8c8ff', '#fee8c7ff', '#fee8c7ff', '#fee7c6ff', '#fee7c5ff', '#fee7c4ff', '#fee6c4ff', '#fee6c3ff', '#fee6c2ff', '#fee5c2ff', '#fee5c1ff', '#fee5c0ff', '#fee4c0ff', '#fee4bfff', '#fee4beff', '#fee3beff', '#fee3bdff', '#fee3bcff', '#fee2bcff', '#fee2bbff', '#fee2baff', '#fee1baff', '#fee1b9ff', '#fee1b8ff', '#fee0b8ff', '#fee0b7ff', '#fee0b6ff', '#fee0b6ff', '#fedfb5ff', '#fedfb4ff', '#fedfb4ff', '#fedeb3ff', '#fedeb2ff', '#fedeb2ff', '#feddb1ff', '#feddb0ff', '#feddb0ff', '#fedcafff', '#fedcaeff', '#fedcadff', '#fedbadff', '#fedbacff', '#fedbabff', '#fedaabff', '#fedaaaff', '#fedaa9ff', '#fed9a9ff', '#fed9a8ff', '#fed9a7ff', '#fed8a7ff', '#fed8a6ff', '#fed8a5ff', '#fed7a5ff', '#fed7a4ff', '#fed7a3ff', '#fed7a3ff', '#fed6a2ff', '#fed6a1ff', '#fed6a1ff', '#fed5a0ff', '#fed59fff', '#fed59fff', '#fdd49eff', '#fdd49eff', '#fdd39dff', '#fdd39dff', '#fdd39cff', '#fdd29cff', '#fdd29cff', '#fdd19bff', '#fdd19bff', '#fdd19aff', '#fdd09aff', '#fdd099ff', '#fdcf99ff', '#fdcf99ff', '#fdcf98ff', '#fdce98ff', '#fdce97ff', '#fdcd97ff', '#fdcd96ff', '#fdcd96ff', '#fdcc96ff', '#fdcc95ff', '#fdcb95ff', '#fdcb94ff', '#fdcb94ff', '#fdca94ff', '#fdca93ff', '#fdc993ff', '#fdc992ff', '#fdc992ff', '#fdc891ff', '#fdc891ff', '#fdc791ff', '#fdc790ff', '#fdc790ff', '#fdc68fff', '#fdc68fff', '#fdc58fff', '#fdc58eff', '#fdc58eff', '#fdc48dff', '#fdc48dff', '#fdc38cff', '#fdc38cff', '#fdc38cff', '#fdc28bff', '#fdc28bff', '#fdc18aff', '#fdc18aff', '#fdc18aff', '#fdc089ff', '#fdc089ff', '#fdbf88ff', '#fdbf88ff', '#fdbf87ff', '#fdbe87ff', '#fdbe87ff', '#fdbd86ff', '#fdbd86ff', '#fdbc85ff', '#fdbc85ff', '#fdbc84ff', '#fdbb84ff', '#fdbb83ff', '#fdba83ff', '#fdb982ff', '#fdb881ff', '#fdb881ff', '#fdb780ff', '#fdb67fff', '#fdb57fff', '#fdb57eff', '#fdb47dff', '#fdb37cff', '#fdb27cff', '#fdb27bff', '#fdb17aff', '#fdb07aff', '#fdaf79ff', '#fdaf78ff', '#fdae78ff', '#fdad77ff', '#fdad76ff', '#fdac76ff', '#fdab75ff', '#fdaa74ff', '#fdaa73ff', '#fda973ff', '#fda872ff', '#fda771ff', '#fda771ff', '#fda670ff', '#fda56fff', '#fda46fff', '#fda46eff', '#fda36dff', '#fda26dff', '#fda16cff', '#fda16bff', '#fda06aff', '#fd9f6aff', '#fd9e69ff', '#fd9e68ff', '#fd9d68ff', '#fd9c67ff', '#fd9b66ff', '#fd9b66ff', '#fd9a65ff', '#fd9964ff', '#fd9964ff', '#fd9863ff', '#fd9762ff', '#fd9662ff', '#fd9661ff', '#fd9560ff', '#fd945fff', '#fd935fff', '#fd935eff', '#fd925dff', '#fd915dff', '#fd905cff', '#fd905bff', '#fd8f5bff', '#fd8e5aff', '#fc8d59ff', '#fc8d59ff', '#fc8c58ff', '#fc8b58ff', '#fc8b58ff', '#fc8a58ff', '#fb8a57ff', '#fb8957ff', '#fb8857ff', '#fb8857ff', '#fb8756ff', '#fa8656ff', '#fa8656ff', '#fa8555ff', '#fa8455ff', '#f98455ff', '#f98355ff', '#f98254ff', '#f98254ff', '#f98154ff', '#f88054ff', '#f88053ff', '#f87f53ff', '#f87f53ff', '#f87e52ff', '#f77d52ff', '#f77d52ff', '#f77c52ff', '#f77b51ff', '#f77b51ff', '#f67a51ff', '#f67951ff', '#f67950ff', '#f67850ff', '#f57750ff', '#f5774fff', '#f5764fff', '#f5764fff', '#f5754fff', '#f4744eff', '#f4744eff', '#f4734eff', '#f4724dff', '#f4724dff', '#f3714dff', '#f3704dff', '#f3704cff', '#f36f4cff', '#f36e4cff', '#f26e4cff', '#f26d4bff', '#f26d4bff', '#f26c4bff', '#f26b4aff', '#f16b4aff', '#f16a4aff', '#f1694aff', '#f16949ff', '#f06849ff', '#f06749ff', '#f06749ff', '#f06648ff', '#f06548ff', '#ef6548ff', '#ef6447ff', '#ef6346ff', '#ee6246ff', '#ee6145ff', '#ed6144ff', '#ed6044ff', '#ed5f43ff', '#ec5e42ff', '#ec5d42ff', '#ec5c41ff', '#eb5b40ff', '#eb5b40ff', '#ea5a3fff', '#ea593eff', '#ea583eff', '#e9573dff', '#e9563cff', '#e8553cff', '#e8553bff', '#e8543bff', '#e7533aff', '#e75239ff', '#e75139ff', '#e65038ff', '#e64f37ff', '#e54f37ff', '#e54e36ff', '#e54d35ff', '#e44c35ff', '#e44b34ff', '#e34a33ff', '#e34933ff', '#e34932ff', '#e24831ff', '#e24731ff', '#e14630ff', '#e1452fff', '#e1442fff', '#e0442eff', '#e0432dff', '#e0422dff', '#df412cff', '#df402bff', '#de3f2bff', '#de3e2aff', '#de3e29ff', '#dd3d29ff', '#dd3c28ff', '#dc3b27ff', '#dc3a27ff', '#dc3926ff', '#db3825ff', '#db3825ff', '#db3724ff', '#da3623ff', '#da3523ff', '#d93422ff', '#d93321ff', '#d93221ff', '#d83220ff', '#d8311fff', '#d7301fff', '#d72f1eff', '#d62e1eff', '#d62e1dff', '#d52d1dff', '#d52c1cff', '#d42b1cff', '#d32a1bff', '#d32a1bff', '#d2291aff', '#d2281aff', '#d12719ff', '#d12719ff', '#d02618ff', '#cf2518ff', '#cf2417ff', '#ce2417ff', '#ce2316ff', '#cd2216ff', '#cc2115ff', '#cc2015ff', '#cb2014ff', '#cb1f14ff', '#ca1e13ff', '#ca1d13ff', '#c91d12ff', '#c81c12ff', '#c81b11ff', '#c71a11ff', '#c71910ff', '#c61910ff', '#c6180fff', '#c5170fff', '#c4160eff', '#c4160eff', '#c3150dff', '#c3140dff', '#c2130cff', '#c1130cff', '#c1120bff', '#c0110bff', '#c0100aff', '#bf0f0aff', '#bf0f09ff', '#be0e09ff', '#bd0d08ff', '#bd0c08ff', '#bc0c07ff', '#bc0b07ff', '#bb0a06ff', '#bb0906ff', '#ba0805ff', '#b90805ff', '#b90704ff', '#b80604ff', '#b80503ff', '#b70503ff', '#b60402ff', '#b60302ff', '#b50201ff', '#b50201ff', '#b40100ff', '#b40000ff', '#b30000ff', '#b20000ff', '#b10000ff', '#b00000ff', '#b00000ff', '#af0000ff', '#ae0000ff', '#ad0000ff', '#ac0000ff', '#ab0000ff', '#ab0000ff', '#aa0000ff', '#a90000ff', '#a80000ff', '#a70000ff', '#a60000ff', '#a50000ff', '#a50000ff', '#a40000ff', '#a30000ff', '#a20000ff', '#a10000ff', '#a00000ff', '#a00000ff', '#9f0000ff', '#9e0000ff', '#9d0000ff', '#9c0000ff', '#9b0000ff', '#9b0000ff', '#9a0000ff', '#990000ff', '#980000ff', '#970000ff', '#960000ff', '#960000ff', '#950000ff', '#940000ff', '#930000ff', '#920000ff', '#910000ff', '#910000ff', '#900000ff', '#8f0000ff', '#8e0000ff', '#8d0000ff', '#8c0000ff', '#8c0000ff', '#8b0000ff', '#8a0000ff', '#890000ff', '#880000ff', '#870000ff', '#870000ff', '#860000ff', '#850000ff', '#840000ff', '#830000ff', '#820000ff', '#820000ff', '#810000ff', '#800000ff', '#7f0000ff']);
+    
+
+    color_map_4c540befff686c64f3a7a949589f36cb.x = d3.scale.linear()
+              .domain([12.111942267686965, 36.84814419806004])
+              .range([0, 450 - 50]);
+
+    color_map_4c540befff686c64f3a7a949589f36cb.legend = L.control({position: 'topright'});
+    color_map_4c540befff686c64f3a7a949589f36cb.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_4c540befff686c64f3a7a949589f36cb.legend.addTo(map_151c038c2c1d094d1b9a0feacead93de);
+
+    color_map_4c540befff686c64f3a7a949589f36cb.xAxis = d3.svg.axis()
+        .scale(color_map_4c540befff686c64f3a7a949589f36cb.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([12.111942267686965, 15.203967508983599, 18.295992750280234, 21.388017991576866, 24.480043232873506, 27.572068474170138, 30.66409371546677, 33.75611895676341, 36.84814419806004]);
+
+    color_map_4c540befff686c64f3a7a949589f36cb.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_4c540befff686c64f3a7a949589f36cb.g = color_map_4c540befff686c64f3a7a949589f36cb.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_4c540befff686c64f3a7a949589f36cb.g.selectAll("rect")
+        .data(color_map_4c540befff686c64f3a7a949589f36cb.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_4c540befff686c64f3a7a949589f36cb.x(color_map_4c540befff686c64f3a7a949589f36cb.color.domain()[i - 1]) : color_map_4c540befff686c64f3a7a949589f36cb.x.range()[0],
+            x1: i < color_map_4c540befff686c64f3a7a949589f36cb.color.domain().length ? color_map_4c540befff686c64f3a7a949589f36cb.x(color_map_4c540befff686c64f3a7a949589f36cb.color.domain()[i]) : color_map_4c540befff686c64f3a7a949589f36cb.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_4c540befff686c64f3a7a949589f36cb.g.call(color_map_4c540befff686c64f3a7a949589f36cb.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Deletion % (Total Deleted / Total Voters, 2025)");
+</script>
+</html>
